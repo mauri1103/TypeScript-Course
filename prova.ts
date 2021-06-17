@@ -1,14 +1,13 @@
-console.log("Test console");
+const persona: {
+  nickName: string;
+  nome: string;
+  cognome: string;
+  eta: number;
+} = {
+  nickName: "Superman",
+  nome: "Robert",
+  cognome: "Basics",
+  eta: 30,
+};
 
-function add(n1:number,n2:number){
-    return n1+n2;
-}
-const numero1 = 5;
-const numero2 = 1.75;
-const testo = "Il sisultato finale e il seguente";
-
-
-const result = add(numero1, numero2);
-
-
-console.log(testo + " " + result);
+console.log(persona.nome);
