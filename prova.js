@@ -1,7 +1,14 @@
-var persona = {
+var persona = 
+// : {
+//   nickName: string;
+//   nome: string;
+//   cognome: string;
+//   eta: number;
+// } =
+{
     nickName: "Superman",
-    name: "Robert",
+    nome: "Robert",
     cognome: "Basics",
     eta: 30
 };
-console.log(persona);
+console.log(persona.nome);
