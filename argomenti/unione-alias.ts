@@ -12,9 +12,7 @@ function combinazione(
   let risultato;
   // con conversione numeri a testo andrei  convertire il testo a numeri
   if (
-    (typeof input1 === "number" && typeof input2 === "number") ||
-    conversioneTestoToNumeri === "sono-numeri"
-  ) {
+    (typeof input1 === "number" && typeof input2 === "number") || conversioneTestoToNumeri === "sono-numeri") {
     risultato = +input1 + +input2;
   } else {
     risultato = input1.toString() + input2.toString();
