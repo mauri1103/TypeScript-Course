@@ -4,25 +4,16 @@ var Ruoli;
     Ruoli[Ruoli["ADMIN"] = 0] = "ADMIN";
     Ruoli[Ruoli["USER"] = 1] = "USER";
     Ruoli[Ruoli["AUTORE"] = 2] = "AUTORE";
-})(Ruoli || (Ruoli = {})); //come creare un enum
-const persona = 
-// : {
-//   nickName: string;
-//   nome: string;
-//   cognome: string;
-//   eta: number;
-// } =
-{
+})(Ruoli || (Ruoli = {}));
+const persona = {
     nickName: "Superman",
     nome: "Robert",
     cognome: "Basics",
     eta: 30,
     hobbie: ["gym", "nuoto"],
     ruolo: [2, "autore"],
-    role: Ruoli.ADMIN, // richiamo il ruolo admin
+    role: Ruoli.ADMIN,
 };
-// persona.ruolo.push('admin'); // aggiungo il ruolo admin
-// persona.ruolo[1]=10;
 let attivitaFavorite;
 attivitaFavorite: ["calcio"];
 console.log(persona.nome);
