@@ -1,17 +1,23 @@
-function combinazione(input1, input2, conversioneTestoToNumeri) {
-    var risultato;
-    // con conversione numeri a testo andrei  convertire il testo a numeri 
-    if ((typeof input1 === "number" && typeof input2 === "number") || conversioneTestoToNumeri === "sono-numeri") {
-        risultato = +input1 + +input2;
-    }
-    else {
-        risultato = input1.toString() + input2.toString();
-    }
-    return risultato;
+function add(n1, n2) {
+    return n1 + n2;
 }
-var combinazioneN = combinazione(30, 26, "sono-numeri");
-console.log(combinazioneN);
-var combinazioneTestoANumeri = combinazione("30", "26", "sono-numeri");
-console.log(combinazioneTestoANumeri);
-var combinazioneString = combinazione("Prova ", "testo", "testo");
-console.log(combinazioneString);
+//la seguente funzione ha come ritorno void e non e obbligatorio mettere il return
+function printResult(num) {
+    console.log("Result: " + num);
+}
+// nella seguente fuznione vado ad assegnare un call back con tipolia void e associando il tipo del  paramentro assegnato
+function addAndHandler(n1, n2, cb) {
+    var risultato = n1 + n2;
+    cb(risultato);
+}
+printResult(add(5, 12));
+var combineValues; // alla variabiele gli associo il tipo funzione cosi in seguito gli posso passare solo quel tipo
+var combineValuesOk; // creo una mini funzione che va a sitemare il bug di non riconoscere e sommare i valori 
+combineValues = add;
+combineValuesOk = add;
+// combineValues = printResult; // come risultato da undefined perche e di tipo void
+// console.log(combineValues(8, 8)); // ha un piccolo bug riconosce solo un singolo valore 
+console.log(combineValuesOk(8, 8));
+addAndHandler(10, 20, function (result) {
+    console.log(result);
+});
